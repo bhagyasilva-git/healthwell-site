@@ -173,4 +173,4 @@ Contact: healthwell@example.com
 
 📌 License
 
-This project is created for educational purposes only.
+This project is created for educational purposes.
