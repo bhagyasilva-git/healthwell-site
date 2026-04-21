@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living Sustainability Goal - Global Health Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f7e2;
+            color: #254222;
+        }
+       /* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+
+        .search-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .table-container {
+            width: 90%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #254222;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #99cc66;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #254222;
+            font-weight: 600;
+        }
+
+        .table-logo {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .thumbnail {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .thumbnail:hover {
+            opacity: 0.8;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 4px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        .thumbnail:hover .tooltip {
+            visibility: visible;
+        }
+
+        .button {
+            background-color: #254222;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #99cc66;
+        }
+       /* Footer */
+footer {
+    background: #254222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Left Side: Logo */
+.footer-left {
+    flex: 1;
+}
+
+
+/* Middle: Website Links (Pages) */
+.footer-middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-middle div {
+    text-align: center;
+}
+
+.footer-middle h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-middle li {
+    margin: 10px 0;
+}
+
+.footer-middle a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-middle a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side: Editors Info */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right div {
+    text-align: right;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-right li {
+    margin: 10px 0;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+/* Footer Social Links */
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Header -->
+    <header>
+        <div class="logo">HealthWell</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="volan.html">Volunteer</a></li>
+                <li><a href="table.txt">Table</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <!-- Profile Icon -->
+                <li class="profile-icon">
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="table-container">
+        <h2>Global Health Indicators - A Sustainability Goal Analysis</h2>
+        <p>Here, we analyze the health status of countries around the world based on key health indicators like life expectancy, access to clean water, and healthcare spending. This data supports the achievement of the Sustainable Development Goal #3: Good Health and Well-being.</p>
+    
+    <!-- table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>HealthWell</th>
+                        <th>
+                            <span class="tooltip">Life Expectancy</span>
+                            <i class="fas fa-heartbeat thumbnail" title="Average life expectancy"></i>
+                        </th>
+                        <th>
+                            <span class="tooltip">Clean Water Access</span>
+                            <i class="fas fa-tint thumbnail" title="Percentage with access to clean water"></i>
+                        </th>
+                        <th>
+                            <span class="tooltip">Healthcare Spending</span>
+                            <i class="fas fa-dollar-sign thumbnail" title="Percentage of GDP spent on healthcare"></i>
+                        </th>
+                        <th>
+                            <span class="tooltip">Country</span>
+                            <i class="fas fa-globe-americas thumbnail" title="Country Name"></i>
+                        </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>81.5 years</td>
+                    <td>99%</td>
+                    <td>9.5% GDP</td>
+                    <td><a href="#">Japan</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>78.5 years</td>
+                    <td>98%</td>
+                    <td>12.2% GDP</td>
+                    <td><a href="#">Germany</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>77.1 years</td>
+                    <td>95%</td>
+                    <td>8.4% GDP</td>
+                    <td><a href="#">Brazil</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>72.5 years</td>
+                    <td>65%</td>
+                    <td>4.1% GDP</td>
+                    <td><a href="#">India</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>82.2 years</td>
+                    <td>99%</td>
+                    <td>10.1% GDP</td>
+                    <td><a href="#">Switzerland</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>80.7 years</td>
+                    <td>97%</td>
+                    <td>8.0% GDP</td>
+                    <td><a href="#">Australia</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>75.3 years</td>
+                    <td>85%</td>
+                    <td>5.6% GDP</td>
+                    <td><a href="#">South Africa</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-globe-americas"></i></td>
+                    <td>78.8 years</td>
+                    <td>97%</td>
+                    <td>7.5% GDP</td>
+                    <td><a href="#">Canada</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+            <div class="logo" >HealthWell</div>  
+        </div>
+        
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+            <div>
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+            <div>
+                <h3>Editors</h3>
+                <ul>
+                    <li><a href="student1.html">Student 1</a></li>
+                    <li><a href="student2.html">Student 2</a></li>
+                    <li><a href="student3.html">Student 3</a></li>
+                    <li><a href="student4.html">student 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+
+
+</body>
+</html>

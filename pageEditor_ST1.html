@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student 1-W.A.S.D> Weerakkody</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    
+</head>
+<body><!-- Header -->
+    <header>
+      <div class="logo">HealthWell</div>
+      <nav>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="tips.html">Tips</a></li>
+              <li><a href="volan.html">Volunteer</a></li>
+              <li><a href="table.txt">Table</a></li>
+              <li><a href="team.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <!-- Profile Icon -->
+              <li class="profile-icon">
+                  <a href="profile.html">
+                      <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                  </a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <section class="stud">
+        <h2>W.A.S.D Weerakkody, Good Health And Well- Being</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="splash">Splash Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The splash screen for "Good Health and Well-being" is designed to provide a visually engaging introduction while ensuring readability and accessibility. It features a background image with a blur effect, a centered text container, and an animated logo at the bottom.</p> 
+                        <h4>Key HTML Elements and Their Purpose:</h4>
+                        <ol>
+                            <li>&lt;html lang="en"&gt; – Defines the document's language as English to improve accessibility for screen readers. </li>
+                            <li>&lt;body&gt; – Contains all visual elements and is styled for full-screen display with centered alignment.</li>
+                            <li><div class="bg-image"> – A fixed-position background that fills the viewport, ensuring a dynamic and immersive visual effect. </li>
+                            <li><div class="bg-text"> – A semi-transparent text container positioned above the background, ensuring high contrast for readability.</li>
+                            <li>&lt;iv class="animated-logo"&gt;– A logo with a heartbeat animation, providing an engaging transition effect for users.</li>
+                        </ol>
+
+                    <h3>Accessibility</h3>
+                        <p>This splash screen includes several accessibility-focused features to ensure a better user experience for all users, including those with disabilities:</p>
+                        <p>1.Readable and High-Contrast Text</p>
+                        <ul>
+                            <li>The text container has a semi-transparent dark background (rgba(0,0,0,0.4)) to ensure good contrast against the background image.</li>
+                            <li>The white font color (color: white;) enhances readability.</li>
+                        </ul>
+                        <p>2.Language Specification (lang="en")</p>
+                        <ul>
+                            <li>Helps screen readers interpret the content correctly.</li>
+                        </ul>
+                        <p>3.Avoiding Background Distractions:</p>
+                        <ul>
+                            <li>The blurred background ensures that the text remains the primary focus, reducing visual clutter.</li>
+                        </ul>
+                        <p>4.Animation Accessibility:</p>
+                        <ul>
+                            <li>>The heartbeat animation is smooth (ease-in-out) and does not use excessive motion, reducing discomfort for users with motion sensitivity</li>
+                        </ul>
+                        <p>5.Text Hierarchy & Semantic HTML:</p>
+                        <ul>
+                            <li>Headings "h1" provide clear structure for screen readers and improve SEO.</li>
+                            <li>Group members are listed as individual <p> elements for better readability instead of being in an unordered list</li>
+                        </ul>
+                        <p>6.Keyboard and Screen Reader Support:</p>
+                        <ul>
+                            <li>The page does not rely on hover effects or complex interactions, ensuring it remains usable for users with keyboard-only navigation or screen readers.</li>
+                        </ul>
+
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="code.html">Include a link to the actual page you describe.</a></p>
+        
+            </section>
+
+            <section>
+                <h2 id="volunteer">Volunteer Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The HTML and CSS of the page are structured to create a user-friendly, aesthetically pleasing, and responsive design focused on volunteering opportunities.</p> 
+                        <p>1.HTML Structure & Key Tags :</p>
+                        <ul>
+                            <li>The layout is organized using semantic HTML elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, and &lt;footer&gt;. This enhances readability and SEO.</li>
+                            <li>&lt;nav&gt; contains a navigation bar with links to different pages (Home, Tips, Volunteer, etc.). The inclusion of a profile icon using &lt;i&gt; tags adds a personal touch for users with accounts.</li>
+                            <li>&lt;div&gt; elements are used generously to structure content blocks, such as cards, reviews, and the footer</li>
+                            <li>The volunteer programs are displayed using &lt;div class="card"&gt; elements, each containing details about a specific program. Each card has icons represented by &lt;i&gt; tags for visual representation of activities.</li>
+                            <li>&lt;table&gt; tags are used to present program fees and duration in an organized manner.</li>
+                            <li>&lt;textarea&gt; and &lt;button&gt; tags in the review section allow users to submit feedback, enhancing interactivity.</li>
+                        </ul>
+                        <p>2.CSS Styling & Key Properties:</p>
+                        <ul>
+                            <li>The layout is enhanced by using CSS Flexbox (display: flex;) and Grid properties for structured alignment of elements</li>
+                            <li>Tailwind CSS is used for styling the buttons and cards, providing a clean and modern aesthetic. For example, classes like btn, btn-view, and btn-apply are applied to style buttons for different functionalities.</li>
+                            <li>Icons from FontAwesome are used to convey meaning quickly through visual representation, enhancing user experience.</li>
+                            <li>The dropdown menu for sorting programs uses simple CSS for visibility and hover effects</li>
+                            <li>The .container class is used for consistent padding and alignment across sections.</li>
+                        </ul>
+                        <p>3.Styling Choices & Purpose:</p>
+                        <ul>
+                            <li>Cards Layout: Divides each program into easily readable sections with images, text, and buttons for clarity</li>
+                            <li>Consistent Spacing: Padding and margin are applied for a well-organized structure, ensuring elements are visually distinct and not cluttered</li>
+                            <li>Visual Hierarchy: Headings, buttons, and ratings are made more prominent with larger font sizes and contrasting colors.</li>
+                        </ul>
+
+
+                    <h3>Accessibility</h3>
+                        <p>Accessibility has been considered by ensuring the following aspects are addressed:</p>
+                        <p>1.Semantic HTML:</p>
+                        <ul>
+                            <li>Proper use of &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;footer&gt; improves accessibility by making content easier to navigate for screen readers.</li>
+                            <li>&lt;a&gt; tags are used for navigation instead of JavaScript-based links, allowing better compatibility with screen readers and keyboard navigation.</li>
+                        </ul>
+                        <p>2.ARIA Attributes:</p>
+                        <ul>
+                            <li>&lt;button&gt; elements are used instead of clickable &lt;div&gt; or &lt;span&gt;, ensuring accessibility for keyboard users and screen readers.</li>
+                            <li>The use of aria-label where appropriate can enhance description of icons and interactive elements (though currently missing, it's recommended to add them)</li>
+                        </ul>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="volan.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The 'Healthy Foods' page of the HealthWell website is implemented using HTML and CSS to create a structured, accessible, and user-friendly interface. The layout is organized with key components like the header, sidebar, content sections, and footer, ensuring a clear navigation experience.</p> 
+                        <p>HTML Structure</p>
+                        <p>1.Header (&lt;header&gt;)</p>
+                        <ul>
+                            <li>Contains the website logo and navigation menu wrapped in a &lt;nav&gt; tag.</li>
+                            <li>Uses an unordered list (&lt;ul>) to provide links to different pages, ensuring semantic structure.</li>
+                            <li>Includes a profile icon linked via a &lt;li&gt; tag with the class profile-icon for better accessibility and recognition.</li>
+                        </ul>
+                        <p>2.Sidebar (&lt;div class='sidebar'>)</p>
+                        <li>Provides quick links to different sections of the page via &lt;a> tags for easier navigation.</li>
+                        <li>Fixed positioning ensures it remains visible during scrolling, improving user experience.</li>
+                        <p>3.Content Container (&lt;div class='container'>)</p>
+                        <ul>
+                            <li>Contains all main content sections organized under individual &lt;div> blocks with the class section.</li>
+                            <li>Each section provides information about healthy foods, benefits, and dietary guidelines.</li>
+                            <li>Uses images (&lt;img>) to visually enhance the content. The &lt;img> tags include alt attributes for accessibility.</li>
+
+                        </ul>
+                        <p>CSS Styling</p>
+                        <p>1.Layout and Structure.</p>
+                        <ul>
+                            <li>Flexbox is used within the header and footer for alignment and spacing (display: flex; justify-content: space-between;).</li>
+                            <li>The sidebar is fixed using position: fixed; for consistent visibility.</li>
+                        </ul>
+                        <p>2.Styling Choices</p>
+                        <ul>
+                            <li>The overall color scheme uses various shades of green (#27ae60, #254222) to convey a natural, health-focused aesthetic.</li>
+                            <li>Cards (&lt;div class='section'>) are styled with padding, margin, rounded corners, and subtle shadowing for enhanced readability and visual appeal.</li>
+                            
+                        </ul>
+                    <h3>Accessibility</h3>
+                        <p>1.Semantic HTML</p>
+                        <ul>
+                            <li>The use of &lt;header>, &lt;nav>, &lt;footer>, &lt;ul>, &lt;li>, and &lt;main> elements contributes to a well-structured, accessible layout.</li>
+                        </ul>
+                        <p>2.Image Accessibility</p>
+                        <ul>
+                            <li>All &lt;img> tags have appropriate alt attributes describing the images, enhancing accessibility for screen readers.</li>
+                        </ul>
+                        <p>3.Keyboard Navigation & Focus Management</p>
+                        <ul>
+                            <li>Links and buttons are styled with clear focus states (:hover effects) to improve usability for keyboard users.</li>
+                        </ul>
+                        <p>4.Color Contrast</p>
+                        <ul>
+                            <li>Text and background colors are chosen to ensure sufficient contrast, meeting accessibility guidelines.</li>
+                        </ul>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="tips.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                <p>1.Layout Structure and Responsiveness:</p> 
+                <ul>
+                <li>Initially, positioning the sidebar and making the page content responsive were difficult. This was resolved by applying position: fixed; for the sidebar and using appropriate width and margin-left properties for the content.</li>
+                </ul>
+                <p>2.Overlapping Elements:</p>
+                <ul>
+                <li> The fixed header overlapped with the page content. Adding margin-top to the main content container fixed this issue.</li>
+                </ul>
+                <p>#.Image Sizing Issues:</p>
+                <ul>
+                <li>Images were not displaying properly in smaller viewports. Using width: 80%; and max-width: 800px; within sections resolved this problem.
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 7 March 2025).</li>
+                        <li><li>w3schools.com (2025) <i>w3schools .</i> Available at: <a href="#">https://www.w3schools.com/html/</a> (Last accessed: 08 March 2025).</li></li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                    <ul> 
+                        <li><a href="#splash">Splash page</a></li>
+                        <li><a href="#volunteer">Volunteer page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+        </aside>
+    </div>
+
+    
+            <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+            <div class="logo" >HealthWell</div>  
+        </div>
+        
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+            <div>
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+            <div>
+                <h3>Editors</h3>
+                <ul>
+                    <li><a href="student1.html">Student 1</a></li>
+                    <li><a href="student2.html">Student 2</a></li>
+                    <li><a href="student3.html">Student 3</a></li>
+                    <li><a href="student4.html">student 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+    
+</body>
+</html>

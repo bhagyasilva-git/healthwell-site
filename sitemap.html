@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Site Map</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f3f0;
+        }
+        /* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+        .sitemap-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        svg {
+            width: 90%;
+            max-width: 1000px;
+        }
+        rect {
+            fill: #94e25b;
+            stroke: #00a406;
+            stroke-width: 2px;
+            transition: fill 0.3s;
+        }
+        rect:hover {
+            fill: #42e448;
+            cursor: pointer;
+        }
+        text {
+            font-size: 18px;
+            fill: black;
+            font-weight: bold;
+        }
+         /* Footer */
+footer {
+    background: #254222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Left Side: Logo */
+.footer-left {
+    flex: 1;
+}
+
+
+/* Middle: Website Links (Pages) */
+.footer-middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-middle div {
+    text-align: center;
+}
+
+.footer-middle h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-middle li {
+    margin: 10px 0;
+}
+
+.footer-middle a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-middle a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side: Editors Info */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right div {
+    text-align: right;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-right li {
+    margin: 10px 0;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+/* Footer Social Links */
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">HealthWell</div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="volan.html">Volunteer</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="team.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <!-- Profile Icon -->
+            <li class="profile-icon">
+                <a href="profile.html">
+                    <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <div class="sitemap-container">
+        <svg viewBox="0 0 1000 600">
+            <g class="group" onclick="navigateTo('home.html')">
+                <rect x="450" y="50" width="150" height="75" rx="10"></rect> 
+                <text x="500" y="95">Home</text>
+            </g>
+            <g class="group" onclick="navigateTo('volan.html')">
+                <rect x="250" y="200" width="150" height="75" rx="10"></rect>
+                <text x="300" y="245">Volunteer</text>
+            </g>
+            <g class="group" onclick="navigateTo('tips.html')">
+                <rect x="450" y="200" width="150" height="75" rx="10"></rect>
+                <text x="500" y="245">Tips</text>
+            </g>
+            <g class="group" onclick="navigateTo('profile.html')">
+                <rect x="650" y="200" width="150" height="75" rx="10"></rect>
+                <text x="690" y="245">User Profile</text>
+            </g>
+            <g class="group" onclick="navigateTo('feedback.html')">
+                <rect x="350" y="350" width="150" height="75" rx="10"></rect>
+                <text x="400" y="395">Feedback</text>
+            </g>
+            <g class="group" onclick="navigateTo('table.html)">
+                <rect x="550" y="350" width="150" height="75" rx="10"></rect>
+                <text x="580" y="395">Table</text>
+            </g>
+        </svg>
+    </div>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+     <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+            <div class="logo" >HealthWell</div>  
+        </div>
+        
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+            <div>
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+            <div>
+                <h3>Editors</h3>
+                <ul>
+                    <li><a href="student1.html">Student 1</a></li>
+                    <li><a href="student2.html">Student 2</a></li>
+                    <li><a href="student3.html">Student 3</a></li>
+                    <li><a href="student4.html">student 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+</body>
+</html>

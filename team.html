@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Team Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: whitesmoke;
+        background-size: cover;
+        background-position: center;
+        line-height: 2px;
+
+        height: 0.5px;
+      }
+       /* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+      .allmembers {
+        text-align: center;
+      }
+
+      /* Profile container with proper spacing */
+      .profile-container {
+        width: 250px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px;
+        position: relative;
+        gap: 30px; /* Gap between image and text */
+      }
+
+      /* Profile images with rounded corners and shadow */
+      img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(211, 52, 52, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      /* Slight zoom effect on hover */
+      .profile-container:hover .profile1,
+      .profile-container:hover .profile2,
+      .profile-container:hover .profile3 .profile-container:hover .profile4 {
+        transform: scale(1.05);
+      }
+
+      /* Description box hidden by default (outside the image) */
+      .boxx1,
+      .boxx2,
+      .boxx3,
+      .boxx4 {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly above */
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        text-align: center;
+        line-height: 1.3; /* Adjust line height for better text spacing */
+      }
+
+      /* Different background colors for each box */
+      .boxx1 {
+        background-color: black;
+        border-top: 3px silver;
+        border: 2px solid gray;
+        box-shadow: 0 4px 10px gray;
+        color: white;
+      }
+
+      .boxx2 {
+        background-color: black;
+        border-top: 3px silver;
+        border: 2px solid gray;
+        box-shadow: 0 4px 10px gray;
+        color: white;
+      }
+
+      .boxx3 {
+        background-color: black;
+        border-top: 3px silver;
+        border: 2px solid gray;
+        box-shadow: 0 4px 10px gray;
+        color: white;
+      }
+
+      .boxx4 {
+        background-color: black;
+        border-top: 3px silver;
+        border: 2px solid gray;
+        box-shadow: 0 4px 10px gray;
+        color: white;
+      }
+
+      .profile-container:hover .boxx1,
+      .profile-container:focus-within .boxx1,
+      .profile-container:hover .boxx2,
+      .profile-container:focus-within .boxx2,
+      .profile-container:hover .boxx3,
+      .profile-container:focus-within .boxx3,
+      .profile-container:hover .boxx4,
+      .profile-container:focus-within .boxx4 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Headings with spacing */
+      h1,
+      h2 {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        background-image: url("https://static.vecteezy.com/system/resources/previews/036/003/869/non_2x/green-background-overlap-dimension-grey-illustration-message-board-for-text-and-message-design-modern-website-vector.jpg");
+        padding: 50px;
+        height: 0.5px;
+
+        color: white;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: right;
+      }
+
+      /* Footer */
+      footer {
+        background: #254222;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Footer Container */
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: flex-start;
+      }
+
+      /* Left Side: Logo */
+      .footer-left {
+        flex: 1;
+      }
+
+      /* Middle: Website Links (Pages) */
+      .footer-middle {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-middle div {
+        text-align: center;
+      }
+
+      .footer-middle h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .footer-middle ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-middle li {
+        margin: 10px 0;
+      }
+
+      .footer-middle a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .footer-middle a:hover {
+        text-decoration: underline;
+      }
+
+      /* Right Side: Editors Info */
+      .footer-right {
+        flex: 1;
+        text-align: right;
+      }
+
+      .footer-right div {
+        text-align: right;
+      }
+
+      .footer-right h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .footer-right ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-right li {
+        margin: 10px 0;
+      }
+
+      .footer-right p {
+        margin: 0;
+      }
+
+      /* Footer Social Links */
+      .footer-links {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .footer-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 20px;
+      }
+
+      .footer-links a:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">HealthWell</div>
+      <nav>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="tips.html">Tips</a></li>
+              <li><a href="volan.html">Volunteer</a></li>
+              <li><a href="table.txt">Table</a></li>
+              <li><a href="team.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <!-- Profile Icon -->
+              <li class="profile-icon">
+                  <a href="profile.html">
+                      <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                  </a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+    <h1 id="h1top">Project Team Profiles</h1>
+
+    <h2>About us! Hover over the images for details.</h2>
+
+    <div class="allmembers">
+      <div class="profile-container">
+        <img src="myAvatarsanu.svg" alt="profile1" tabindex="0" />
+
+        <div class="boxx1">
+          <p class="name">Name: Sanuji Weerakkody</p>
+          <p>Role: Student 1</p>
+          <p>
+            Task Done: <br />
+            <a href="splash.html">Splash Screen</a> <br />
+            <a href="volunteer.html">Volunteer page</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-container">
+        <img src="myAvatarsama.svg" alt="profile2" tabindex="0" />
+
+        <div class="boxx2">
+          <p class="name">Name: Samadhi Senadheera</p>
+          <p>Role: Student 2</p>
+          <p>
+            Task Done: <br />
+            <a href="home.html">Home page</a> <br />
+            <a href="table.html">Table Screen</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-container">
+        <img src="myAvatarbhagya.svg" alt="profile3" tabindex="0" />
+
+        <div class="boxx3">
+          <p class="name">Name: Bhagya Anuhasini Silva</p>
+          <p>Role: Student 3</p>
+          <p>
+            Task Done: <br />
+            <a href="feedback.html">Feedback Form</a> <br />
+            <a href="team.html">Team profile</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-container">
+        <img src="myAvatarkanish.svg" alt="profile4" tabindex="0" />
+
+        <div class="boxx4">
+          <p class="name">Name: Kanishcar Gobierajan</p>
+          <p>Role: Student 4</p>
+          <p>
+            Task Done: <br />
+            <a href="profile.html">User Profile</a> <br />
+            <a href="sitemap.html">Sitemap</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+
+    <br /><br /><br /><br /><br /><br />
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+          <div class="logo">HealthWell</div>
+        </div>
+
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+          <div>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="team.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+          <div>
+            <h3>Editors</h3>
+            <ul>
+              <li><a href="student1.html">Student 1</a></li>
+              <li><a href="student2.html">Student 2</a></li>
+              <li><a href="student3.html">Student 3</a></li>
+              <li><a href="student4.html">student 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <p>Contact us: healthwell@example.com | +123 456 7890</p>
+    </footer>
+  </body>
+</html>

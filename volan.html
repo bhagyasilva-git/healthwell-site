@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Programs</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+ 
+            background-color: white;
+        }
+/* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+
+        .justified-paragraph {
+    text-align: justify;
+}
+        /* Dropdown styling */
+        .sort-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    margin-top: 18px;
+    position: relative;
+}
+h1 {
+    margin-right: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-button i {
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {
+            text-align: left;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 48%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .icons div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 33%;
+        }
+        .icons i {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .extra-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .extra-info div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            color: #008000;
+        }
+        .table-container {
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #002c5f;
+            color: white;
+        }
+        td {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .gray-row {
+            background-color: #e0e0e0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .btn {
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            width: 48%;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .view {
+            background-color: #007bff;
+            color: white;
+        }
+        .apply {
+            background-color: #28a745;
+            color: white;
+        }
+        .country {
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .rating-summary span {
+            color: #008000;
+            font-size: 36px;
+        }
+        .reviews {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .review-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+        }
+        .review-box p {
+            font-size: 14px;
+            color: #333;
+        }
+        .review-box a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .review-form {
+            margin-top: 30px;
+            background: rgb(212, 239, 255);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .emoji-container {
+            display: flex;
+            gap: 10px;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .emoji {
+            cursor: pointer;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            height: 80px;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-send {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-cancel {
+            background-color: #ccc;
+        }
+         /* Footer */
+footer {
+    background: #254222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Left Side: Logo */
+.footer-left {
+    flex: 1;
+}
+
+
+/* Middle: Website Links (Pages) */
+.footer-middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-middle div {
+    text-align: center;
+}
+
+.footer-middle h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-middle li {
+    margin: 10px 0;
+}
+
+.footer-middle a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-middle a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side: Editors Info */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right div {
+    text-align: right;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-right li {
+    margin: 10px 0;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+/* Footer Social Links */
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+    </style>
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <div class="logo">HealthWell</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="volan.html">Volunteer</a></li>
+                <li><a href="table.txt">Table</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <!-- Profile Icon -->
+                <li class="profile-icon">
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Volunteer programs </h1>
+        
+        <!-- Dropdown for Sorting/Filtering -->
+        <div class="sort-container">
+            <div class="dropdown">
+                <button class="dropdown-button">Sort by <i class="fa fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Most Popular</a>
+                    <a href="#">Duration</a>
+                    <a href="#">Location</a>
+                </div>
+            </div>
+        </div>
+
+
+     <!-- Additional cards go here (like Bali, Kenya, etc.) -->
+        <div class="cards">
+            <!-- Tanzania - Childcare -->
+            <div class="card">
+                <div class="country">
+                    <i class="fa-solid fa-flag"></i> Tanzania
+                </div>
+                <img src="vol1.jpg" alt="Childcare in Arusha">
+                <div class="card-content">
+                    <div class="icons">
+                        <div>
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>Increases access to healthcare</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>3-5 hours volunteering per day</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span>Program Fees from £300</span>
+                        </div>
+                    </div>
+                    
+                    <div class="extra-info">
+                        <div><i class="fa-solid fa-calendar"></i> 3-5 hours volunteering per day</div>
+                        <div><i class="fa-solid fa-users"></i> Volunteers aged 16+ and families</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                            </tr>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td class="gray-row">£400 (£28/day)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>Support health workers in underserved communities by assisting in medical check-ups, hygiene education, and community wellness initiatives. No medical background required—just a passion for helping others!</p>
+
+                    <div class="buttons">
+                        <button class="btn view">View Project</button>
+                        <button class="btn apply">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bali - Sea Turtle Conservation -->
+            <div class="card">
+                <div class="country">
+                    <i class="fa-solid fa-flag"></i> India
+                </div>
+                <img src="vol2.avif" alt="Sea Turtle Conservation">
+                <div class="card-content">
+                    <div class="icons">
+                        <div>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Supports disease prevention</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>5-6 hours volunteering per day</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span>Program Fees from £500</span>
+                        </div>
+                    </div>
+
+                    <div class="extra-info">
+                        <div><i class="fa-solid fa-calendar"></i> 2 - 8 weeks</div>
+                        <div><i class="fa-solid fa-users"></i> Volunteers aged 18+ (medical students preferred) </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                            </tr>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td class="gray-row">£700 (£50/day)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>Assist in vaccination awareness, community outreach, and logistics in rural areas. Work alongside healthcare professionals to ensure immunization programs reach those in need.</p>
+
+                    <div class="buttons">
+                        <button class="btn view">View Project</button>
+                        <button class="btn apply">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="country">
+                    <i class="fa-solid fa-flag"></i> Bail
+                </div>
+                <img src="vol3.jpg" alt="Sea Turtle Conservation">
+                <div class="card-content">
+                    <div class="icons">
+                        <div>
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <span>Supports mental well-being</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span> 4-5 hours volunteering per day</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span> Program Fees from £450</span>
+                        </div>
+                    </div>
+
+                    <div class="extra-info">
+                        <div><i class="fa-solid fa-calendar"></i>Durations from 2 - 12 weeks</div>
+                        <div><i class="fa-solid fa-users"></i> Volunteers aged 16+ and families</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                            </tr>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td class="gray-row"> £600 (£43/day)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="justified-paragraph">Help organize therapy sessions, awareness workshops, and emotional well-being activities in schools and community centers. Work with professionals to promote mental health care.</p>
+
+                    <div class="buttons">
+                        <button class="btn view">View Project</button>
+                        <button class="btn apply">Apply</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add two more cards here following the same format -->
+            <div class="card">
+                <div class="country">
+                    <i class="fa-solid fa-flag"></i> Kenya
+                </div>
+                <img src="vol4.jpg" alt="Wildlife Conservation in Kenya">
+                <div class="card-content">
+                    <div class="icons">
+                        <div>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <span>Promotes physical well-being</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>3-6 hours volunteering per day</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span>Program Fees from £350</span>
+                        </div>
+                    </div>
+
+                    <div class="extra-info">
+                        <div><i class="fa-solid fa-calendar"></i>Durations from 1 - 10 weeks</div>
+                        <div><i class="fa-solid fa-users"></i> Volunteers 16+ & families</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                            </tr>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td class="gray-row">£480 (£34/day)</td>
+                            </tr>
+                        </table>
+                        <p class="justified-paragraph">Lead fitness sessions, yoga classes, and outdoor sports activities for children and adults. Encourage an active lifestyle and educate communities about healthy living.</p>
+                        <div class="buttons">
+                            <button class="btn view">View Project</button>
+                            <button class="btn apply">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <!-- Tanzania - Childcare -->
+                <div class="card">
+                    <div class="country">
+                        <i class="fa-solid fa-flag"></i> Nepal
+                    </div>
+                    <img src="vol5.jpg" alt="Childcare in Arusha">
+                    <div class="card-content">
+                        <div class="icons">
+                            <div>
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span>Improves healthcare access in remote areas</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>3-4 hours volunteering per day</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-money-bill"></i>
+                                <span>Program Fees from £250</span>
+                            </div>
+                        </div>
+                        
+                        <div class="extra-info">
+                            <div><i class="fa-solid fa-calendar"></i>Durations from 1 - 8 weeks</div>
+                            <div><i class="fa-solid fa-users"></i>Volunteers aged 18+ (medical experience preferred)</div>
+                        </div>
+    
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Duration</th>
+                                    <th>Program Fee</th>
+                                </tr>
+                                <tr>
+                                    <td>2 weeks</td>
+                                    <td class="gray-row">£450 (£32/day)</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p class="justified-paragraph">Support healthcare professionals in providing essential medical services to remote villages. Volunteers will help with basic health screenings, administering vaccinations, and organizing health education programs. Ideal for those with medical or public health backgrounds, but all volunteers with a passion for community health are welcome</p>
+    
+                        <div class="buttons">
+                            <button class="btn view">View Project</button>
+                            <button class="btn apply">Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="container">
+            
+        
+                <!-- Existing content remains unchanged -->
+        
+                <!-- User Ratings and Reviews Section -->
+                <div class="container">
+                    <!-- Rating Summary -->
+                    <div class="rating-summary">
+                        <span>9.4/10</span> Exceptional
+                    </div>
+                    
+                    <!-- Recent Reviews -->
+                    <div class="reviews">
+                        <div class="review-box">
+                            <strong>10/10 Excellent</strong>
+                            <p>Wir hatten einen tollen Aufenthalt mit unserer Familie... <a href="#">See more</a></p>
+                            <small>Daniela G. - Aug 12, 2019</small>
+                        </div>
+                        <div class="review-box">
+                            <strong>10/10 Excellent</strong>
+                            <p>We booked for 10 days and Enrico was very accommodating... <a href="#">See more</a></p>
+                            <small>Dr. Jean M B. - Aug 10, 2018</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Review Form -->
+                    <div class="review-form">
+                        <p>Send us your review</p>
+                        <div class="emoji-container">
+                            <span class="emoji">😊</span>
+                            <span class="emoji">😐</span>
+                            <span class="emoji">😞</span>
+                        </div>
+                        <textarea placeholder="Got suggestions? We'd love to hear them!"></textarea>
+                        <div class="form-buttons">
+                            <button class="btn btn-cancel">Cancel</button>
+                            <button class="btn btn-send">Send Feedback</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+            <div class="logo" >HealthWell</div>  
+        </div>
+        
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+            <div>
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+            <div>
+                <h3>Editors</h3>
+                <ul>
+                    <li><a href="student1.html">Student 1</a></li>
+                    <li><a href="student2.html">Student 2</a></li>
+                    <li><a href="student3.html">Student 3</a></li>
+                    <li><a href="student4.html">student 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+</body>
+</html>
+
+

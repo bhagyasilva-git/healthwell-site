@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="User_Profile.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" type="icon" href="icon.png">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    /* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+    /* Footer */
+footer {
+    background: #254222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Left Side: Logo */
+.footer-left {
+    flex: 1;
+}
+
+
+/* Middle: Website Links (Pages) */
+.footer-middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-middle div {
+    text-align: center;
+}
+
+.footer-middle h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-middle li {
+    margin: 10px 0;
+}
+
+.footer-middle a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-middle a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side: Editors Info */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right div {
+    text-align: right;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-right li {
+    margin: 10px 0;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+/* Footer Social Links */
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+
+    .tab {
+      display: none;
+      margin: 20px 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background-color: #4caf50;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      font-weight: bold;
+      transition: width 0.3s ease;
+    }
+
+    /* Input Invalid Feedback */
+    input.invalid {
+      border: 2px solid red;
+    }
+
+    input:focus.invalid {
+      border: 2px solid #ff4747;
+    }
+
+    .social-icon {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .social-icon_item {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .menu {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .menu_item {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    /* Form Button */
+    .skipBtn, .nextBtn, .prevBtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .skipBtn:hover, .nextBtn:hover, .prevBtn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">HealthWell</div>
+  <nav>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="tips.html">Tips</a></li>
+          <li><a href="volan.html">Volunteer</a></li>
+          <li><a href="table.txt">Table</a></li>
+          <li><a href="team.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <!-- Profile Icon -->
+          <li class="profile-icon">
+              <a href="profile.html">
+                  <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+              </a>
+          </li>
+      </ul>
+  </nav>
+</header>
+
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar">0%</div>
+</div>
+
+<form id="regForm" action="mailto:kanishcarg@gmail.com" method="post" enctype="text/plain">
+  <h1>Complete Your Health Profile:</h1>
+
+  <!-- Personal Details Tab -->
+  <div class="tab">Personal Details:
+    <p><input placeholder="First name..." title="Enter your first name" oninput="this.className = ''" name="fname"></p>
+    <p><input placeholder="Last name..." title="Enter your last name" oninput="this.className = ''" name="lname"></p>
+    <p><input placeholder="Age..." title="Enter your age" oninput="this.className = ''" name="age"></p>
+    <p><input placeholder="Gender..." title="Enter your gender" oninput="this.className = ''" name="gender"></p>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wellness Information Tab -->
+  <div class="tab">Wellness Information:
+    <p><input placeholder="Daily Exercise Routine..." title="Enter your daily exercise routine" oninput="this.className = ''" name="exercise"></p>
+    <p><input placeholder="Preferred Diet..." title="Enter your preferred diet" oninput="this.className = ''" name="diet"></p>
+    <p><input placeholder="Sleep Schedule..." title="Enter your sleep schedule" oninput="this.className = ''" name="sleep"></p>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="previousStep()">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <button type="button" id="skipBtn" onclick="skipStep()">Skip</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Health History Tab -->
+  <div class="tab">Health History:
+    <p><input placeholder="Any Medical Conditions..." title="Enter any known medical conditions" oninput="this.className = ''" name="medical"></p>
+    <p><input placeholder="Current Medications..." title="Enter any current medications" oninput="this.className = ''" name="medications"></p>
+    <p><input placeholder="Family Health History..." title="Enter family health history" oninput="this.className = ''" name="familyhealth"></p>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="previousStep()">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <button type="button" id="skipBtn" onclick="skipStep()">Skip</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Information Tab -->
+  <div class="tab">Contact Information:
+    <p><input placeholder="Telephone Number..." title="Enter your telephone number" oninput="this.className = ''" name="tel"></p>
+    <p><input placeholder="E-mail..." title="Enter your email address" oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="Postal address..." title="Enter your postal address" oninput="this.className = ''" name="address"></p>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="previousStep()">Previous</button>
+        <button type="button" id="skipBtn" onclick="skipStep()">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  let currentTab = 0; // Track the current tab
+  showTab(currentTab); // Display the first tab
+
+  // Show the current tab
+  function showTab(n) {
+    let x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+
+    // Update progress bar
+    let progress = Math.round(((n + 1) / x.length) * 100);
+    document.getElementById("progressBar").innerHTML = progress + "%";
+    document.getElementById("progressBar").style.width = progress + "%";
+
+    // Adjust button visibility
+    if (n == 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == (x.length - 1)) {
+      document.getElementById("nextBtn").style.display = "none";
+      document.getElementById("skipBtn").innerHTML = "Submit";
+    } else {
+      document.getElementById("nextBtn").style.display = "inline";
+      document.getElementById("skipBtn").innerHTML = "Skip";
+    }
+  }
+
+  // Move to the next/previous tab
+  function nextPrev(n) {
+    let x = document.getElementsByClassName("tab");
+    if (n == 1 && !validateForm()) return false; // Validate before moving forward
+    x[currentTab].style.display = "none";
+    currentTab = currentTab + n;
+    if (currentTab >= x.length) {
+      document.getElementById("regForm").submit(); // Submit form when all steps are completed
+      return false;
+    }
+    showTab(currentTab);
+  }
+
+  // Skip current step
+  function skipStep() {
+    let x = document.getElementsByClassName("tab");
+    x[currentTab].style.display = "none";
+    currentTab = currentTab + 1;
+    showTab(currentTab);
+  }
+
+  // Validate form fields before moving to the next tab
+  function validateForm() {
+    let x, y, i, valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    for (i = 0; i < y.length; i++) {
+      if (y[i].value == "") {
+        y[i].className += " invalid";
+        valid = false;
+      }
+    }
+    return valid; // If any field is empty, return false
+  }
+</script>
+ <!-- Footer -->
+ <footer>
+  <div class="footer-container">
+      <!-- Left Side: Logo -->
+      <div class="footer-left">
+          <div class="logo" >HealthWell</div>  
+      </div>
+      
+      <!-- Middle: Website Links (Pages) -->
+      <div class="footer-middle">
+          <div>
+              <h3>Pages</h3>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="team.html">About Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+      </div>
+      
+      <!-- Right Side: Editors Info -->
+      <div class="footer-right">
+          <div>
+              <h3>Editors</h3>
+              <ul>
+                  <li><a href="student1.html">Student 1</a></li>
+                  <li><a href="student2.html">Student 2</a></li>
+                  <li><a href="student3.html">Student 3</a></li>
+                  <li><a href="student4.html">student 4</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="footer-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+
+</body>
+</html>

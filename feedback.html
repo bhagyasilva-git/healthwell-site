@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+        background-position: center;
+        background-repeat: no-repeat;
+
+        line-height: 2px;
+      }
+     /* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        background-image: url("https://img.freepik.com/free-vector/mobile_677411-2143.jpg");
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        background-size: cover; /* Ensure the image covers the entire viewport */
+        background-position: center;
+        line-height: 2px;
+        padding: 80px;
+        height: 0.5px;
+        color: whitesmoke;
+      }
+
+      h2 {
+        text-align: center;
+        max-width: 100%;
+        word-wrap: break-word; /* Forces long words to break and wrap onto the next line */
+        word-break: break-word;
+      }
+
+      h3 {
+        color: darkgrey;
+      }
+
+      .box {
+        line-height: 3px;
+        padding: 20px;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .box2 {
+        line-height: 3px;
+        padding: 20px;
+        background-color: green;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .box3 {
+        line-height: 3px;
+        padding: 5px;
+        background-color: darkgray;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      label {
+        margin-right: 15px; /* Space between label and input */
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        margin-right: 20px; /* Space between label and input */
+        border-width: 2px;
+        background-color: white;
+        width: 280px;
+        height: 30px;
+      }
+
+      input:hover {
+        background-color: lightgrey;
+      }
+
+      .char-counter {
+        font-size: 13px;
+        font-style: italic;
+        color: grey;
+        margin-top: 170px; /* Adds some space above the counter */
+      }
+
+      textarea {
+        width: 500px;
+        margin-bottom: 0px;
+        border-width: 3px;
+        background-color: white;
+      }
+
+      textarea:hover {
+        background-color: lightgrey;
+      }
+
+      #submit {
+        background-color: rgb(4, 42, 4);
+        color: whitesmoke;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        border: 2px solid rgb(4, 42, 4);
+        display: block; /* For block-level centering */
+        margin: 0 auto; /* Centers the button horizontally */
+        box-shadow: 0 8px 10px rgb(4, 42, 4);
+      }
+
+      #top {
+        background-color: gray;
+        color: whitesmoke;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        border: 2px solid gray;
+        display: block; /* For block-level centering */
+        margin: 0 auto; /* Centers the button horizontally */
+        box-shadow: 0 8px 10px gray;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper2 {
+        display: flex;
+        justify-content: right;
+      }
+
+      #cookieConsent {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #cookieConsent button {
+        display: inline-block; /* Ensures buttons are inline */
+        margin: 0 10px; /* Adds space between buttons */
+        padding: 10px 20px; /* Adds padding for better appearance */
+        background-color: #15e42a; /* Button background color */
+        color: black; /* Button text color */
+        border: none; /* Removes default border */
+        border-radius: 5px; /* Rounds the corners */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+      }
+
+      #cookieConsent button:hover {
+        background-color: #60f674; /* Darker shade on hover */
+      }
+
+      ::placeholder {
+        font-size: 14px;
+      }
+
+      .emoji {
+        font-size: 35px;
+      }
+
+      .emoji:hover {
+        font-size: 45px;
+      }
+
+      .rating-option:hover {
+        background-color: rgb(118, 255, 105);
+      }
+
+      .rating-option {
+        display: flex;
+        flex-direction: column; /* Stack emoji, label, and radio button vertically */
+        text-align: center;
+        align-items: center;
+        gap: 3px; /* Space between elements */
+        padding: 15px;
+        background-color: grey;
+        border-radius: 10px;
+        width: 120px; /* Equal width for each option */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .satisfaction-section {
+        display: flex;
+        justify-content: space-between; /* Spread the options horizontally */
+        gap: 10px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      input[type="checkbox"] {
+        transform: scale(1.5); /* Increases the size of the radio button */
+        cursor: pointer;
+      }
+
+      input[type="radio"] {
+        transform: scale(1.5); /* Increases the size of the radio button */
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:hover {
+        transform: scale(1.7); /* Increases the size of the radio button */
+        cursor: pointer;
+      }
+
+      input[type="radio"]:hover {
+        transform: scale(1.7);
+      }
+
+      fieldset {
+        border: 2px solid rgb(47, 79, 53);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0; /* Space outside the fieldset */
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      }
+
+      legend {
+        font-style: italic;
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+        padding: 0 10px; /* Space around the legend text */
+        text-align: right;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+      /* Footer */
+      footer {
+        background: #254222;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Footer Container */
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: flex-start;
+      }
+
+      /* Left Side: Logo */
+      .footer-left {
+        flex: 1;
+      }
+
+      /* Middle: Website Links (Pages) */
+      .footer-middle {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-middle div {
+        text-align: center;
+      }
+
+      .footer-middle h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .footer-middle ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-middle li {
+        margin: 10px 0;
+      }
+
+      .footer-middle a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .footer-middle a:hover {
+        text-decoration: underline;
+      }
+
+      /* Right Side: Editors Info */
+      .footer-right {
+        flex: 1;
+        text-align: right;
+      }
+
+      .footer-right div {
+        text-align: right;
+      }
+
+      .footer-right h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .footer-right ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-right li {
+        margin: 10px 0;
+      }
+
+      .footer-right p {
+        margin: 0;
+      }
+
+      /* Footer Social Links */
+      .footer-links {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .footer-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 20px;
+      }
+
+      .footer-links a:hover {
+        opacity: 0.7;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 50px;
+          padding: 40px;
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          width: 100%;
+        }
+
+        .rating-option {
+          width: 100%;
+        }
+
+        .satisfaction-section {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 28px;
+          padding: 20px;
+        }
+
+        .button-container {
+          width: 100%;
+          padding: 10px;
+        }
+
+        button {
+          width: 100%;
+        }
+
+        textarea {
+          width: 100%;
+        }
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">HealthWell</div>
+      <nav>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="tips.html">Tips</a></li>
+              <li><a href="volan.html">Volunteer</a></li>
+              <li><a href="table.txt">Table</a></li>
+              <li><a href="team.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <!-- Profile Icon -->
+              <li class="profile-icon">
+                  <a href="profile.html">
+                      <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                  </a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+
+    <h1 id="h1top">Feedback Form</h1>
+    <h2>
+      We’d love to hear how your experience has been with
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      this website
+    </h2>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <h3>
+      **Please take a moment to fill out the form below and let us know
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      how we can improve your experience and ensure that our
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      information is as accurate and useful as possible.
+    </h3>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div class="container">
+      <form id="myForm">
+        <fieldset>
+          <legend>Feedback</legend>
+          <div class="box">
+            <label> Was this your first time visiting this website? </label>
+
+            <div class="radio-group">
+              <input type="radio" id="yes2" name="visit" value="yes" required />
+              <label for="yes2"> Yes </label>
+
+              <input type="radio" id="no2" name="visit" value="no" />
+              <label for="no2"> No </label>
+            </div>
+          </div>
+
+          <div class="box">
+            <label> Was this site informative and easy to navigate? </label>
+
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="useful-yes"
+                name="useful"
+                value="yes"
+                required
+              />
+              <label for="useful-yes"> Yes </label>
+
+              <input type="radio" id="useful-no" name="useful" value="no" />
+              <label for="useful-no"> No </label>
+            </div>
+          </div>
+
+          <div class="box">
+            <label> If "No" suggest any improvements: </label>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <div class="textarea2">
+              <textarea
+                id="improvements2"
+                name="improvements"
+                rows="10"
+                maxlength="700"
+                required
+                oninput="updateCounter(this)"
+              ></textarea>
+
+              <div class="char-counter">
+                <span id="charCount2"></span>
+              </div>
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+          <div class="box">
+            <label> How satisfied are you with our services? </label><br />
+
+            <div class="satisfaction-section">
+              <div class="rating-option">
+                <span class="emoji">😄</span>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <label for="verySatisfied"> Very Satisfied </label>
+                <br /><br /><br /><br /><br /><br />
+                <input
+                  type="radio"
+                  id="verySatisfied"
+                  name="satisfaction"
+                  value="Very Satisfied"
+                />
+              </div>
+
+              <div class="rating-option">
+                <span class="emoji">🙂</span>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <label for="satisfied"> Satisfied </label>
+                <br /><br /><br /><br /><br /><br />
+                <input
+                  type="radio"
+                  id="satisfied"
+                  name="satisfaction"
+                  value="Satisfied"
+                />
+              </div>
+
+              <div class="rating-option">
+                <span class="emoji">😐</span>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <label for="neutral"> Neutral </label>
+                <br /><br /><br /><br /><br /><br />
+                <input
+                  type="radio"
+                  id="neutral"
+                  name="satisfaction"
+                  value="Neutral"
+                />
+              </div>
+
+              <div class="rating-option">
+                <span class="emoji">🙁</span>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <label for="dissatisfied"> Dissatisfied </label>
+                <br /><br /><br /><br /><br /><br />
+                <input
+                  type="radio"
+                  id="dissatisfied"
+                  name="satisfaction"
+                  value="Dissatisfied"
+                />
+              </div>
+
+              <div class="rating-option">
+                <span class="emoji">😞</span>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <label for="veryDissatisfied">
+                  Very <br /><br /><br /><br /><br />
+                  Dissatisfied
+                </label>
+                <br /><br /><br /><br /><br /><br />
+                <input
+                  type="radio"
+                  id="veryDissatisfied"
+                  name="satisfaction"
+                  value="Very Dissatisfied"
+                />
+              </div>
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+          <div class="box">
+            <label> Would you recomend our servises? </label>
+
+            <div class="radio">
+              <input type="radio" id="yes1" name="visit" value="yes" required />
+              <label for="yes1"> Yes </label>
+
+              <input type="radio" id="no1" name="visit" value="no" />
+              <label for="no1"> No </label>
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+          <div class="box">
+            <label for="fileUpload"> Attach a file: </label>
+
+            <div class="box3">
+              <input
+                type="file"
+                id="fileUpload"
+                name="fileUpload"
+              /><br /><br />
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+          <div class="box">
+            <label for="submissionDate"> Select date and time: </label>
+
+            <div class="box3">
+              <input
+                type="datetime-local"
+                id="submissionDate"
+                name="submissionDate"
+                required
+              /><br /><br />
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+          <div class="box">
+            <label for="contactMethod">
+              To stay informed on updates and offers: </label
+            ><br />
+            <input
+              list="contact-options"
+              id="contactMethod"
+              name="contactMethod"
+              placeholder="Choose an option"
+              required
+            />
+
+            <div class="Receive-updates">
+              <datalist id="contact-options">
+                <option class="contact-options" value="Email"></option>
+                <option class="contact-options" value="SMS"></option>
+                <option
+                  class="contact-options"
+                  value="Both Email and SMS"
+                ></option>
+                <option class="contact-options" value="Not necessary"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+          <div class="box">
+            <label for="additional3"> Additional questions or requests: </label>
+
+            <div class="textarea1">
+              <textarea
+                id="additional3"
+                name="additional"
+                rows="10"
+                maxlength="200"
+                required
+                oninput="updateCounter(this)"
+              ></textarea>
+
+              <div class="char-counter">
+                <span id="charCount3"></span>
+              </div>
+            </div>
+          </div>
+
+          <br /><br /><br /><br /><br />
+        </fieldset>
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <fieldset>
+          <legend>Personal</legend>
+          <div class="box">
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="First Name"
+              class="user_input"
+              required
+            />
+            <span class="error" id="fnameError"></span>
+
+            <br /><br />
+
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Last Name"
+              required
+            />
+            <span class="error" id="lnameError"></span>
+
+            <br /><br />
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <span class="error" id="emailError"></span>
+
+            <br /><br />
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+            <span class="error" id="phoneError"></span>
+
+            <br /><br />
+          </div>
+
+          <div class="box">
+            <textarea
+              id="address"
+              name="address"
+              rows="4"
+              placeholder="Address"
+            ></textarea>
+          </div>
+
+          <br /><br /><br /><br /><br />
+        </fieldset>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <!-- Example of a simple cookie consent banner -->
+        <div id="cookieConsent">
+          This website uses cookies to ensure you get the best experience on our
+          website.
+          <button id="acceptCookies">Accept</button>
+          <button id="declineCookies">Decline</button>
+        </div>
+
+        <script>
+          document.getElementById("acceptCookies").onclick = function () {
+            // Set a first-party cookie
+            document.cookie =
+              "userConsent=true; path=/; max-age=" + 60 * 60 * 24 * 30; // 30 days
+            document.getElementById("cookieConsent").style.display = "none";
+          };
+
+          document.getElementById("declineCookies").onclick = function () {
+            document.getElementById("cookieConsent").style.display = "none";
+          };
+        </script>
+
+        <script>
+          function updateCounter(textareaElement) {
+            // Get the corresponding counter element based on the textarea ID
+            let counter = document.getElementById(
+              "charCount" + textareaElement.id.slice(-1)
+            );
+
+            // Get the maxlength attribute of the textarea
+            let maxLength = textareaElement.getAttribute("maxlength");
+
+            // Calculate the remaining characters
+            let remaining = maxLength - textareaElement.value.length;
+
+            // Update the counter text without duplication
+            counter.textContent = remaining + " characters remaining";
+          }
+        </script>
+
+        <br /><br /><br /><br /><br /><br />
+
+        <div class="wrapper">
+          <div class="button-container">
+            <button id="submit">Submit</button>
+          </div>
+        </div>
+
+        <br /><br /><br /><br /><br /><br />
+      </form>
+
+      <div class="wrapper2">
+        <a href="#top" class="back-to-top">Back to Top</a>
+      </div>
+      <br />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+          <div class="logo">HealthWell</div>
+        </div>
+
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+          <div>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="team.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+          <div>
+            <h3>Editors</h3>
+            <ul>
+              <li><a href="student1.html">Student 1</a></li>
+              <li><a href="student2.html">Student 2</a></li>
+              <li><a href="student3.html">Student 3</a></li>
+              <li><a href="student4.html">student 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <p>Contact us: healthwell@example.com | +123 456 7890</p>
+    </footer>
+    <script src="feedbackscript.js"></script>
+  </body>
+</html>

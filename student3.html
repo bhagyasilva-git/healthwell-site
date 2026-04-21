@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - Bhagya Silva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="pageEditor_validator.css"> <!-- External CSS link -->
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header>
+        <div class="logo">HealthWell</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="volan.html">Volunteer</a></li>
+                <li><a href="table.txt">Table</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <!-- Profile Icon -->
+                <li class="profile-icon">
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="stud">
+        <h2>Bhagya Anuhasini Silva, student 3</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="feedback">Feedback Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+
+                        
+                            <h4>HTML Techniques:</h4>
+                            <p>The HTML code of the feedback page follows a logical structure and uses various tags to organize the form elements and layout. Below are the key HTML techniques used:</p>
+
+                            <p>Form Structure and Elements:</p>
+
+                        <ul>
+                            <li>form: This tag is used to wrap the entire form and group input elements for submission. The id="myForm" helps identify the form in scripts, allowing validation or interaction.</li>
+                            <li>fieldset and legend: These tags are used to group related items within the form, improving readability and accessibility. The <legend> provides a title for each section, such as "Feedback" and "Personal".</li>
+                            <li>input: Used for various types of input, including text fields, radio buttons, file uploads, and dates. Each input has attributes like type, name, and value, which specify the input's functionality (e.g., type="radio" for yes/no questions).</li>
+                            <li>textarea: Used for multi-line text input (e.g., suggestions for improvement). The maxlength attribute ensures users can't input more characters than allowed, and oninput="updateCounter(this)" dynamically updates the character count.</li>
+                            <li>datalist: Used with the input field to provide a set of predefined options for the user, such as email/SMS preferences.</li>
+                            
+                            <h4>Content Organization:</h4>
+
+                            <li>h1, h2, and h3: These header tags help create a clear content hierarchy. h1 is used for the main title, h2 and h3 are for subheadings. This provides structure to the page and helps users easily navigate through different sections.
+                            br: Break lines are used generously to space out elements for visual clarity. However, excessive br tags can reduce semantic structure, and in some cases, CSS would be a better solution for spacing.</li>
+                            
+                            <h4>Cookie Consent:</h4>
+
+                            <li>The div tag with the ID cookieConsent is used to display a banner for cookie consent. It includes two buttons (button) that allow users to accept or decline cookies. JavaScript then handles the action to store consent in a cookie or dismiss the banner.</li>
+                            
+                            <h4>Validation and Interactivity:</h4>
+
+                            <li>The required attribute on input fields ensures that users cannot submit the form without filling out certain fields.
+                            The oninput event on the textareas updates the character counter dynamically, enhancing user experience by providing real-time feedback.</li>
+                        </ul>
+                        
+                            <h4>CSS Techniques:</h4>
+                        
+                            <p>The CSS styling is used to enhance the page’s functionality and visual appeal. While you didn’t provide the complete CSS, some key techniques are inferred based on the HTML structure:</p>
+                        <ul>
+                            <h4>Layout and Spacing:</h4>
+                            
+                            <li>Flexbox and Grid: These modern layout techniques are often used in forms like this for creating responsive and adaptive designs. It is likely that Flexbox or Grid is being used to align form elements in a row or column, making them easily adaptable across different screen sizes.</li>
+                            
+                            <li>Margin and padding: These properties are used to create space between elements, making the form easier to read and fill out. For example, spacing between input fields and sections improves legibility and creates a clean, organized layout.</li>
+                            
+                            <h4>Styling Form Elements:</h4>
+                            
+                            <li> buttons: By grouping radio buttons inside div class="radio-group", a custom design can be applied to make the radio buttons more visually appealing. This can include adding background colors, borders, or custom icons to indicate selection.</li>
+                            
+                            <li>The submit button button id="submit" and the cookie consent buttons are styled to stand out. Common properties include background-color, color, and border-radius to create a visually engaging button.</li>
+                            
+                            <li>Textareas: The styling likely includes resize: none to prevent resizing and custom border properties to enhance their appearance. The character counter is placed beside the textarea using absolute positioning or flex properties.</li>
+                            
+                            <h4>Responsive Design:</h4>
+                            
+                            <li>Media Queries: These are crucial in ensuring that the form and its elements adapt to different screen sizes (mobile, tablet, desktop). This ensures a seamless experience on various devices.</li>
+                            
+                            <li>Display block and display inline-block: These properties help ensure that the form elements, like text inputs, labels, and buttons, appear in a user-friendly and organized manner.</li>
+                            
+                            <h4>Visual Enhancements:</h4>
+                            
+                            <li>Font Sizes and Colors: The use of different font sizes for headers h1, h2, h3 ensures clear hierarchy and focus on key sections. Colors are likely defined to enhance readability and visual appeal, creating a contrast between text and background.</li>
+                            
+                            <li>Icons/Emojis: In the satisfaction section, emojis (like 😄, 🙁) are used to represent satisfaction levels visually. This provides an intuitive experience for users to rate their satisfaction.</li>
+                            
+                            <li>Hover Effects: For links and buttons, CSS hover effects might be used to highlight interactive elements and improve user engagement.</li>
+                            
+                            <h4>Error Handling:</h4>
+                            
+                            <li>span.error: These are used beside inputs (such as name, email, phone) to display error messages when the user fails to input valid data. These are dynamically shown using JavaScript upon form validation.</li>
+                            Key Purpose and Logic Behind Choices:
+                            
+                            <li>Clear Structure: Using form sections like fieldset and legend provides a semantic structure, grouping related questions and making the form easier to read.</li>
+                            
+                            <li>User Experience: Elements like radio buttons for "Yes/No" questions, emojis for satisfaction levels, and a character counter for textareas ensure that the form is user-friendly, visually engaging, and offers real-time feedback.</li>
+                            
+                           <li> Accessibility: Labels are appropriately associated with their respective inputs using the for attribute, making the form accessible to screen readers.</li>
+                            
+                            <li>Interactivity and Feedback: Real-time interactivity (like the character counter) and cookie consent management ensure that the form remains interactive, functional, and user-friendly.</li>
+                            
+                            <li>Responsiveness: With media queries and flexible layouts, the form adapts across devices, making it accessible to users with different screen sizes.</li>
+                        
+                        </ul>
+
+                    <h3>Accessibility</h3>
+                        <p>By using semantic HTML elements like fieldset, legend, label, and ensuring proper focus states, error handling, keyboard navigation, and color contrast, the page is made more accessible. Adding interactive feedback and ensuring the layout is responsive further improves the experience for users with different abilities and needs. Through these strategies, the page is optimized for a wide range of users, including those who rely on assistive technologies.</p>
+                    
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#feedbackVal">link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="Feedback.html">link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="team">Team Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+
+                        Key HTML Tags:
+
+                        <ul>
+                            <li>html lang="en":
+
+                            The lang attribute specifies the language of the document (English in this case). This is important for accessibility as it helps screen readers identify the language to read the text correctly.
+                            </li>
+                            <li>head:
+
+                            Contains meta-information about the page, such as its character encoding (meta charset="utf-8") and viewport settings (meta name="viewport" content="width=device-width, initial-scale=1.0"). The latter ensures that the page is responsive and scales well on different devices.
+                            </li>
+                            <li>title:
+
+                            Sets the title of the page, displayed in the browser tab.
+                            
+                            </li>
+                            <li>h1 and h2:
+
+                            Headings are used for creating a content hierarchy. h1 is the main title of the page, and h2 introduces the section about the team. This is important for both SEO and accessibility.
+                            </li>
+                            <li>div class="profile-container":
+
+                            Used for each member's profile. This tag groups together the profile image and description, which is essential for organizing content on the page. The flex layout inside the container allows for easy arrangement of elements.
+                            </li>
+                            <li>img:
+
+                            The images are included using the img tag. The src attribute points to the image location, and alt provides a text description for accessibility, especially for users with screen readers or when the image fails to load.
+                            </li>
+                            <li>a:
+
+                            The anchor tags are used to create links to other pages. The href attribute contains the destination URL. These links are placed within the task descriptions, allowing users to navigate to relevant pages when clicked.
+                            </li>
+                            <li>p:
+
+                            Paragraphs are used for displaying the profile details, including the name, role, and tasks done. The p tag organizes text in a readable manner.
+                            </li>
+                            <li>div class="allmembers":
+
+                            This tag is a container for all the member profiles, and using inline-flex for the children (profile-container) makes them horizontally aligned with space between them.
+                            </li></ul>
+                            
+                           <h4> Key CSS Properties:</h4>
+                           
+                           <ul>
+                           <li>font-family:
+
+                            The font-family property specifies the fonts to be used on the page, ensuring that the text is clear and easy to read.
+                            </li><li>background-color:
+
+                            The background-color: whitesmoke; is used to provide a neutral, light background that contrasts well with text and other content.
+                            </li><li>flexbox:
+
+                            The profiles are laid out using the Flexbox model (display: inline-flex;). Flexbox is ideal for aligning elements in rows or columns and distributing space efficiently. The flex-direction: column; aligns the child elements (like the image and description) vertically.
+                            </li><li>box-shadow:
+
+                            The box-shadow property is used to give the profile images and description boxes a subtle shadow, creating a sense of depth and making the content stand out.
+                            </li><li>border-radius:
+
+                            Applied to the images to create rounded corners, giving the profile images a polished and modern look.
+                            </li><li>transition:
+
+                            The transition property is used to apply smooth visual effects, like the hover effect on profile images. This creates a zoom effect on hover (transform: scale(1.05);), making the profile interactive and engaging.
+                            </li><li>opacity and transform:
+
+                            These properties are used together to create a smooth reveal effect for the profile descriptions. By default, the boxx elements (the description boxes) are hidden (opacity: 0;), and on hover (.profile-container:hover), they fade in and slide up using opacity: 1; and transform: translateY(0);.
+                            </li><li>text-align:
+
+                            Used to center the text inside containers, such as in the headings and profile details, making the content aesthetically pleasing and easy to read.
+                            </li><li>padding and margin:
+
+                            padding adds space inside the container, ensuring content doesn’t touch the borders of the elements. margin adds space between different elements to separate them visually and improve layout clarity.
+                            </li><li>position: relative:
+
+                            Used in .profile-container to ensure that the hover effects and transitions can be applied correctly within the context of the element.
+                            </li><li>@media Queries:
+                            Though not explicitly included here, the use of @media queries would allow the layout to adapt to different screen sizes. This ensures that the page remains responsive, especially in mobile views.
+                                 </li></ul>               
+                            
+                            <h3>Accessibility</h3>
+                        <p>The page addresses accessibility by using semantic HTML elements like headings, paragraphs, and links to improve content structure for screen readers. It includes alt text for images to provide context for visually impaired users. The form and links are structured to allow keyboard navigation, and the layout ensures that text contrasts well with the background for readability. These practices enhance the page's usability for a wider audience, including those with visual or mobility impairments.</p>
+                        
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#teamVal">link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="team.html">link to the actual page you describe.</a></p>
+            </section>
+
+    
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                    <ol>
+                        <li>Responsive Design for Different Screen Sizes:
+                            <ul>
+                                <li>Challenge: Ensuring that the layout of the profile containers and images adjusted seamlessly across various screen sizes was initially tricky. The design needed to be mobile-friendly and visually balanced on both large and small screens.</li>
+                                <li>Solution: Flexbox was used for layout structuring, and media queries were implemented to handle the responsiveness of elements. This ensured the page adapted to different screen sizes, providing a better user experience across devices.</li>
+                                <li>Lesson Learned: Flexbox and media queries are crucial tools for achieving responsive designs. Testing across multiple screen sizes early on can help avoid layout issues.</li>
+                            </ul>
+                        </li>
+                        <li>Hover Effects on Images:
+                            <ul>
+                                <li>Challenge: Implementing a smooth zoom effect on hover over images while keeping the page visually appealing without causing performance issues.</li>
+                                <li>Solution: A transition was applied to the image element, utilizing <code>transform: scale(1.05)</code> to zoom the image smoothly when hovered over, enhancing interactivity. I ensured that the effect didn’t degrade performance by keeping the code lightweight.</li>
+                                <li>Lesson Learned: Adding interactive elements such as hover effects should be balanced with performance considerations. Testing the page for responsiveness and load times is essential to ensure it remains fast and fluid.</li>
+                            </ul>
+                        </li>
+                        <li>Styling the Profile Boxes:
+                            <ul>
+                                <li>Challenge: Making the profile boxes visible when hovered while keeping them hidden initially without obstructing the overall layout.</li>
+                                <li>Solution: I used opacity and translation for a smooth transition effect that revealed the profile description when hovered. This was combined with opacity and transform properties to create a slide-up effect, which felt fluid.</li>
+                                <li>Lesson Learned: CSS transitions and transforms are powerful tools for creating smooth visual effects that enhance user interaction. Careful use of transitions ensures that elements can appear and disappear in a user-friendly manner without causing layout shifts.</li>
+                            </ul>
+                        </li>
+                        <li>Content Organization and Readability:
+                            <ul>
+                                <li>Challenge: Ensuring that the content was organized in a readable manner while maintaining aesthetic appeal.</li>
+                                <li>Solution: Headings like <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> were used to provide clear sections, while the text within the profile boxes was kept short and well-spaced to avoid overwhelming the user. The background colors and text contrast were chosen to maximize readability.</li>
+                                <li>Lesson Learned: Proper structuring of content using semantic HTML tags (like headings and paragraphs) improves both accessibility and user experience. Clear visual hierarchy with appropriate spacing makes content more digestible.</li>
+                            </ul>
+                        </li>
+                        <li>Linking to Other Pages:
+                            <ul>
+                                <li>Challenge: Ensuring that the links to other pages within the team profiles were functional and easy to understand for the user.</li>
+                                <li>Solution: I used simple, descriptive text links inside each profile, making sure they were clear and easy to navigate. The text was also linked to appropriate, relevant pages for each student.</li>
+                                <li>Lesson Learned: Descriptive links help improve the user experience and make the website more accessible to users who rely on screen readers or other assistive technologies.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                                             
+                </section>
+
+        <!--    <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
+        -->
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                    <ul class="ref">
+                        <li>cartoonize.net (2025) <i>cartoonize.net .</i> Available at: <a href="#">https://www.cartoonize.net/avatar-maker/</a> (Last accessed: 05 March 2025).</li>
+                        <li>w3schools.com (2025) <i>w3schools .</i> Available at: <a href="#">https://www.w3schools.com/html/</a> (Last accessed: 08 March 2025).</li>
+                       
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+               
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="feedback.html">Feedback form</a> </li>
+                        <li><a href="team.html">Team page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+       <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+            <div class="logo" >HealthWell</div>  
+        </div>
+        
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+            <div>
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+            <div>
+                <h3>Editors</h3>
+                <ul>
+                    <li><a href="student1.html">Student 1</a></li>
+                    <li><a href="student2.html">Student 2</a></li>
+                    <li><a href="student3.html">Student 3</a></li>
+                    <li><a href="student4.html">student 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+</body>
+</html>

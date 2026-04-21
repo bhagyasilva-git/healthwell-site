@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Healthy Foods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+         
+        }
+        /* Header Styling */
+header {
+    background-color: #254222;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Icon */
+nav ul li.profile-icon {
+    margin-left: auto; /* Push the profile icon to the right */
+}
+
+nav ul li.profile-icon a {
+    color: white;
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+nav ul li.profile-icon a:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Font Awesome Icon */
+.fa-user {
+    font-size: 24px; /* Adjust size of the user icon */
+}
+
+        .sidebar {
+            width: 250px;
+            background: #27ae60;
+            padding: 20px;
+            position:fixed;
+            height: 100vh;
+            left: 0;
+            margin-top: 4.8rem;
+            bottom: 2;
+            color: white;
+            text-align: left;
+        }
+        .sidebar h2 {
+            color: white;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px 0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 75%;
+            margin-left: 270px;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #27ae60;
+            text-align: left;
+        }
+        .section {
+            background: white;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 80%;
+            max-width: 800px;
+        }
+        .section img {
+            display: block;
+            margin-top: 10px;
+            margin-left: 40px;
+            width: 80%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .top-button:hover {
+            background: #219150;
+        }
+         /* Footer */
+footer {
+    background: #254222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Left Side: Logo */
+.footer-left {
+    flex: 1;
+}
+
+
+/* Middle: Website Links (Pages) */
+.footer-middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-middle div {
+    text-align: center;
+}
+
+.footer-middle h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-middle li {
+    margin: 10px 0;
+}
+
+.footer-middle a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-middle a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side: Editors Info */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right div {
+    text-align: right;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-right li {
+    margin: 10px 0;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+/* Footer Social Links */
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+    </style>
+</head>
+<body>
+      <!-- Header -->
+      <header>
+        <div class="logo">HealthWell</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="volan.html">Volunteer</a></li>
+                <li><a href="table.txt">Table</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <!-- Profile Icon -->
+                <li class="profile-icon">
+                    <a href="profile.html">
+                        <i class="fa fa-user"></i> <!-- You can use a profile icon here -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <h2>Table of Contents</h2>
+        <a href="#what-are-healthy-foods">1. What Are Healthy Foods?</a>
+        <a href="#benefits-of-eating-healthy">2. Benefits of Eating Healthy</a>
+        <a href="#types-of-healthy-foods">3. Types of Healthy Foods</a>
+        <a href="#balanced-diet-guidelines">4. Balanced Diet Guidelines</a>
+        <a href="#tips-for-healthy-eating">5. Tips for Healthy Eating</a>
+    </div>
+    
+    <div class="container">
+        <h1 id="top">Healthy Foods: A Guide to Better Nutrition</h1>
+        
+        <div class="section" id="what-are-healthy-foods">
+            <h2>1. What Are Healthy Foods?</h2>
+            <p>Healthy foods are natural, nutrient-rich food sources that provide essential vitamins and minerals necessary for overall well-being. They contribute to better digestion, improved immunity, and sustained energy levels.</p>
+            <ul>
+                <li>Fruits & Vegetables – Rich in fiber, vitamins, and antioxidants.</li>
+                <li>Whole Grains – Provide complex carbohydrates and fiber.</li>
+                <li>Protein Sources – Lean meats, fish, eggs, legumes, and nuts.</li>
+                <li>Dairy Products – Good sources of calcium and probiotics.</li>
+                <li> Healthy Fats – Found in avocados, olive oil, and nuts. </li>
+            <img src="colorful plate of healthy food 1.webp" alt="Healthy food plate">
+        </div>
+        
+        <div class="section" id="benefits-of-eating-healthy">
+            <h2>2. Benefits of Eating Healthy</h2>
+            <p>Eating nutritious food has several benefits, including improved physical health, mental clarity, long-term well-being, enhanced vitality, and the prevention of various diseases.those are thge example for that :-</p>
+            <ul>
+                <li>Improved energy levels and brain function</li>
+                <li>Stronger immune system and disease prevention</li>
+                <li>Better digestion and gut health</li>
+                <li>Lower risk of heart disease, diabetes, and obesity</li>
+                <li>Healthy skin, hair, and overall physical appearance</li>
+            </ul>
+            <img src="nsert an infographic of health benefits related to food.jpg" alt="Health benefits infographic">
+            <br>
+        </div>
+        
+        <div class="section" id="types-of-healthy-foods">
+            <h2>3. Types of Healthy Foods</h2>
+            <p> balanced diet consists of a variety of nutrient-rich foods that provide essential vitamins, minerals, and other health benefits. These include:</p>
+             <ul>   
+                <li>Fruits & Vegetables – High in vitamins A, C, and K, rich in antioxidants, and support digestion.</li>
+                <li>Whole Grains – Include oats, brown rice, and quinoa, providing fiber for digestion and blood sugar regulation.</li>
+                <li>Proteins – Found in lean meats, eggs, tofu, and beans, essential for muscle growth and metabolism</li>
+             </ul>
+             <img src="food groups like fruits, grains, and proteins.jpg" alt="Health benefits infographic">
+            <br>
+        </div>
+        
+        <div class="section" id="balanced-diet-guidelines">
+            <h2>4. Balanced Diet Guidelines</h2>
+            <p>A balanced diet includes a variety of food groups in appropriate proportions:</p>
+            <ul>   
+                <li>50% Fruits & Vegetables</li>
+                <li>25% Proteins </li>
+                <li>25% Whole Grains</li>
+             </ul>
+            <p>so it is recommended to drink at least 8 glasses of water per day. Additionally, reducing the consumption of processed foods and excessive sugar helps maintain overall health. Including healthy fats in moderation, such as those found in nuts and olive oil, supports heart and brain function.</p>
+            <img src="healthy meal plate diagram.jpg" alt="Healthy diet plate">
+            <br>
+        </div>
+        
+        <div class="section" id="tips-for-healthy-eating">
+            <h2>5. Tips for Healthy Eating</h2>
+            <p>Making small, mindful food choices can improve overall health and well-being. Here are some simple tips for healthier eating:</p>
+            <ul>
+                <li>Eat a rainbow of fruits & vegetables daily</li>
+                <li>Replace white bread with whole grainsn</li>
+                <li>Reduce sugary drinks & opt for water</li>
+                <li>Prepare home-cooked meals instead of fast food</li>
+                <li>Snack on nuts, yogurt, or fruits instead of chips</li>
+            </ul>
+            <img src="healthy meal prep setup.jpg" alt="Healthy meal prep">
+        </div>
+        
+        <button class="top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top</button>
+    </div>
+    
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Logo -->
+        <div class="footer-left">
+            <div class="logo" >HealthWell</div>  
+        </div>
+        
+        <!-- Middle: Website Links (Pages) -->
+        <div class="footer-middle">
+            <div>
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Side: Editors Info -->
+        <div class="footer-right">
+            <div>
+                <h3>Editors</h3>
+                <ul>
+                    <li><a href="student1.html">Student 1</a></li>
+                    <li><a href="student2.html">Student 2</a></li>
+                    <li><a href="student3.html">Student 3</a></li>
+                    <li><a href="student4.html">student 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Contact us: healthwell@example.com | +123 456 7890</p>
+</footer>
+</body>
+</html>
+

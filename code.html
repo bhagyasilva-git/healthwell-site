@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Good Health and Well-being</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("background.png") no-repeat center center;
+            background-size: cover;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            z-index: -1; /* Send background to the back */
+        }
+
+        .bg-text {
+            background-color: rgba(0,0,0, 0.4);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animated Logo at the Bottom */
+        .animated-logo {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: url("splash_animation.mp4") no-repeat center center;
+            background-size: contain;
+            animation: heartbeat 4s infinite ease-in-out;
+        }
+
+        /* Heartbeat Animation */
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
+        }
+
+        /* Hide splash screen after 4 seconds */
+        .splash-screen {
+            animation: fadeOut 4s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            99% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+
+    <div class="bg-text splash-screen">
+        <h1 style="font-size:50px">Good Health and Well-being</h1>
+        <p>"Promoting good health and well-being through education, accessible healthcare, and sustainable initiatives. Our mission is to empower individuals and communities with the knowledge and resources needed for a healthier future. Together, we strive to create a world where everyone has the opportunity to live a happy, active, and fulfilling life."</p>
+        <br>
+        <p style="font-size:20px">Group Members</p>
+        <p>Sanuji Weerakkody</p>
+        <p>Samadhi Senadheera</p>
+        <p>Bhagya Anuhasini</p>
+        <p>Kanishcar Gobierajan</p>
+    </div>
+
+    <!-- Animated Logo (Transparent Background) -->
+    <div class="animated-logo"></div>
+
+    <script>
+        // Automatically redirect to the home page after 4 seconds
+        setTimeout(function() {
+            window.location.href = 'home.html'; // Redirect to home page
+        }, 4000);
+    </script>
+</body>
+</html>
+
