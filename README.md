@@ -93,7 +93,7 @@ Option 2: Clone the Repository Using Git
 Open the GitHub repository.
 Click the Code button and copy the HTTPS repository URL.
 Open a terminal or command prompt and run:
-git clone <repository-url>
+git clone https://github.com/bhagyasilva-git/healthwell-site.git
 Open the project folder.
 Launch index.html in any modern web browser.
 
