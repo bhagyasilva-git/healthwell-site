@@ -45,7 +45,7 @@ Balanced diet guidelines
 Healthy food types and benefits
 
 
-🧮 Health Tools - not actually available yet
+🧮 Health Tools - not actually available 
 
 BMI Calculator
 Water Intake Tracker
