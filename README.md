@@ -4,11 +4,17 @@
 HealthWell is an educational website developed to promote healthy lifestyles, global well-being, and community engagement in alignment with Sustainable Development Goal 3: Good Health and Well-Being. The website provides users with health education, global health data, volunteering opportunities, wellness tools, and interactive feedback features through an accessible and user-friendly interface.
 
 🎯 Project Objectives
+
 Promote awareness of physical, mental, and social well-being
+
 Educate users about healthy eating and balanced lifestyles
+
 Present global health indicators and sustainability data
+
 Encourage volunteering and community participation
+
 Apply web development best practices using HTML, CSS, and JavaScript
+
 
 🧩 Key Features
 🏠 Main Pages
