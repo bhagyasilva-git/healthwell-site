@@ -6,15 +6,15 @@ HealthWell is an educational website developed to promote healthy lifestyles, gl
 
 **Project Objectives**
 
-Promote awareness of physical, mental, and social well-being
+* Promote awareness of physical, mental, and social well-being
 
-Educate users about healthy eating and balanced lifestyles
+* Educate users about healthy eating and balanced lifestyles
 
-Present global health indicators and sustainability data
+* Present global health indicators and sustainability data
 
-Encourage volunteering and community participation
+* Encourage volunteering and community participation
 
-Apply web development best practices using HTML, CSS, and JavaScript
+* Apply web development best practices using HTML, CSS, and JavaScript
 
 
  **Key Feature**
