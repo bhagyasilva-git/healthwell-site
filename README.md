@@ -118,7 +118,7 @@ Screen reader compatibility
 **How to Run the Project**
 
 
-Option 1: Download the Project Folder (Recommended)
+**Option 1: Download the Project Folder (Recommended)**
 
 Download the entire project folder as a ZIP file.
 
@@ -131,7 +131,7 @@ Double-click index.html (Home page) to launch the website.
 Use the navigation menu to explore all sections (Home, Tips, Volunteer, Table, Feedback, etc.).
 
 
-Option 2: Clone the Repository Using Git
+**Option 2: Clone the Repository Using Git**
 
 Open the GitHub repository.
 
