@@ -121,17 +121,6 @@ Keyboard-friendly navigation
 Screen reader compatibility
 
 
-👨‍💻 Project Team - L4 students of University of Westminster (IIT SriLanka)
-
-Sanuji Weerakkody – Splash Screen, Volunteer Page
-
-Samadhi Senadheera – Home Page, Global Health Table
-
-Bhagya Anuhasini Silva – Feedback Form, Team Profiles
-
-Kanishcar Gobierajan – User Profile, Sitemap
-
-(All members contributed equally to development, content, accessibility, and testing.)
 
 
 🚀 How to Run the Project
@@ -165,12 +154,3 @@ Open the project folder.
 Launch index.html in any modern web browser.
 
 
-📄 Footer Information
-HealthWell
-Pages: Home | About Us | Contact | Editors
-Contact: healthwell@example.com
- | +123 456 7890
-
-📌 License
-
-This project is created for educational purposes.
