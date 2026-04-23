@@ -1,10 +1,10 @@
-🌿 HealthWell – Good Health and Well-Being Website
+**🌿 HealthWell – Good Health and Well-Being Website**
 
-Project Overview
+**Project Overview**
 
 HealthWell is an educational website developed to promote healthy lifestyles, global well-being, and community engagement in alignment with Sustainable Development Goal 3: Good Health and Well-Being. The website provides users with health education, global health data, volunteering opportunities, wellness tools, and interactive feedback features through an accessible and user-friendly interface.
 
-Project Objectives
+**Project Objectives**
 
 Promote awareness of physical, mental, and social well-being
 
@@ -17,7 +17,7 @@ Encourage volunteering and community participation
 Apply web development best practices using HTML, CSS, and JavaScript
 
 
-🧩 Key Feature
+ **Key Feature**
 
 Main Pages
 
@@ -30,7 +30,7 @@ Contact
 Feedback
 Sitemap
 
-🌱 Health & Wellness Content
+**Health & Wellness Content**
 
 Healthy Eating guides
 
@@ -45,13 +45,7 @@ Balanced diet guidelines
 Healthy food types and benefits
 
 
-🧮 Health Tools - not actually available 
-
-BMI Calculator
-Water Intake Tracker
-Quick Meditation feature
-
-🌍 Global Health Indicators
+**Global Health Indicators**
 
 Life expectancy
 
@@ -62,7 +56,7 @@ Healthcare spending (% of GDP)
 Country-based health comparison table
 
 
-🤝 Volunteer Programs
+**Volunteer Programs**
 
 Healthcare support programs
 
@@ -75,7 +69,7 @@ Community outreach and vaccination awareness
 Program duration, fees, age limits, and application options
 
 
-💬 Feedback & Interaction
+**Feedback & Interaction**
 
 User feedback form with validation
 
@@ -88,7 +82,7 @@ Cookie consent banner
 User profile input form
 
 
-👥 Team Profiles
+**Team Profiles**
 
 Individual student profiles
 
@@ -97,7 +91,7 @@ Roles and assigned tasks clearly listed
 Hover effects for interactivity
 
 
-🛠️ Technologies Used
+**Technologies Used**
 
 HTML5 – Semantic structure and accessibility
 
@@ -106,7 +100,7 @@ CSS3 – Styling, Flexbox, Grid, animations, media queries
 JavaScript – Interactivity, form validation, dynamic feedback
 
 
-♿ Accessibility Features
+**Accessibility Features**
 
 Semantic HTML elements
 
@@ -123,7 +117,7 @@ Screen reader compatibility
 
 
 
-🚀 How to Run the Project
+**How to Run the Project**
 
 
 Option 1: Download the Project Folder (Recommended)
