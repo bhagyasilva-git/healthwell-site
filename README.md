@@ -19,9 +19,7 @@ Apply web development best practices using HTML, CSS, and JavaScript
 
  **Key Feature**
 
-Main Pages
-
-Home
+Main Pages - Home
 Tips
 Volunteer
 Table (Global Health Indicators)
