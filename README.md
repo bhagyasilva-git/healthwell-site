@@ -91,11 +91,11 @@ Hover effects for interactivity
 
 **Technologies Used**
 
-HTML5 – Semantic structure and accessibility
+1. HTML5 – Semantic structure and accessibility
 
-CSS3 – Styling, Flexbox, Grid, animations, media queries
+2. CSS3 – Styling, Flexbox, Grid, animations, media queries
 
-JavaScript – Interactivity, form validation, dynamic feedback
+3. JavaScript – Interactivity, form validation, dynamic feedback
 
 
 **Accessibility Features**
